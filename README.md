@@ -77,7 +77,6 @@ synthesis-ai-agents/
 │       ├── appsettings.Development.json
 │       ├── appsettings.json
 │       ├── Program.cs
-│       ├── README.md
 │       ├── SynthesisAIAgents.Api.csproj
 │       ├── SynthesisAIAgents.http
 │       └── SynthesisAIAgents.slnx
@@ -89,6 +88,7 @@ synthesis-ai-agents/
 │       ├── Tools/
 │       ├── Utilities/
 │       └── SynthesisAIAgents.Tests.csproj
+├── README.md
 └── .gitignore
 
 - src folder contains the API implementation and configuration.
