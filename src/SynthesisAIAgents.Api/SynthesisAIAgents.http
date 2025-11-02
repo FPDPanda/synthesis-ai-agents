@@ -53,31 +53,6 @@ Accept: application/json
   }
 }
 
-### Submit execution graph (fetch -> sentiment)
-POST {{SynthesisAIAgents_HostAddress}}/api/orchestrator/submit
-Content-Type: application/json
-Accept: application/json
-
-{
-  "graph": {
-    "runId": "run-fetch-sent-001",
-    "name": "fetch-then-sentiment",
-    "agents": [
-      {
-        "id": "fetch1",
-        "type": "fetch",
-        "parameters": { "tool": "http_fetcher", "url": "https://httpbin.org/json" },
-        "next": ["sent1"]
-      },
-      {
-        "id": "sent1",
-        "type": "aws_sentiment_analysis",
-        "parameters": {},
-        "next": []
-      }
-    ]
-  }
-}
 
 ### Poll run status (replace run id)
 GET {{SynthesisAIAgents_HostAddress}}/api/orchestrator/status/run-fetch-kp-001
