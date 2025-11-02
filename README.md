@@ -138,6 +138,9 @@ reportgenerator "-reports:**/coverage.cobertura.xml" "-targetdir:coveragereport"
 
 Step 3. Navigate to the generated report directory and open `index.html` in your browser to view the coverage report.
 
+<img width="394" height="199" alt="image" src="https://github.com/user-attachments/assets/0e6475cb-530e-46df-9894-6e6854cf9d8a" />
+
+
 ---
 
 ## 🔭 Next Steps that were not implemented due to time constraints
