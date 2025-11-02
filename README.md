@@ -63,12 +63,13 @@ It enables enterprises to integrate AI as part of a **hybrid workforce**, runnin
 ---
 
 ## 📂 Folder Structure
+```
 synthesis-ai-agents/
 ├── src/
 │   └── SynthesisAIAgents.Api/
 │       ├── Agents/
 │       ├── Controllers/
-│       ├── DTOs/
+│       ├── DTOS/
 │       ├── Models/
 │       ├── Properties/
 │       ├── Services/
@@ -76,20 +77,20 @@ synthesis-ai-agents/
 │       ├── Utilities/
 │       ├── appsettings.Development.json
 │       ├── appsettings.json
-│       ├── Program.cs
-│       ├── SynthesisAIAgents.Api.csproj
-│       ├── SynthesisAIAgents.http
-│       └── SynthesisAIAgents.slnx
+│       └── Program.cs
+│
 ├── tests/
-│   └── SynthesisAIAgents.Tests/
+│   └── SynthesisAIAgents.Api.Tests/
 │       ├── Agents/
 │       ├── Controllers/
 │       ├── Services/
 │       ├── Tools/
 │       ├── Utilities/
-│       └── SynthesisAIAgents.Tests.csproj
-├── README.md
+│       └── SynthesisAIAgents.Api.Tests.csproj
+│
+├── SynthesisAIAgents.sln
 └── .gitignore
+```
 
 - src folder contains the API implementation and configuration.
 - tests folder contains unit tests organized by folder. (move here before running test coverage commands)
