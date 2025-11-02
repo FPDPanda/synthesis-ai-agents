@@ -1,8 +1,8 @@
 # 🧠 SynthesisAIAgents — Orchestrator Prototype
 
-![.NET](https://img.shields.io/badge/.NET-10.0-blueviolet)
+![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-100%25-green)
+![Coverage](https://img.shields.io/badge/coverage-97%25-green)
 
 ## 🚀 Overview
 **SynthesisAIAgents** is a prototype AI **agent orchestration layer** built for the “Multi-Agent Task Solver” backend challenge.  
