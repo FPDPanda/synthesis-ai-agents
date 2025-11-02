@@ -25,7 +25,7 @@ Accept: application/json
       },
       {
         "id": "kp1",
-        "type": "keyphrases",
+        "type": "aws_keyphrases",
         "parameters": {},
         "next": []
       }
@@ -45,7 +45,7 @@ Accept: application/json
     "agents": [
       {
         "id": "kp1",
-        "type": "keyphrases",
+        "type": "aws_keyphrases",
         "parameters": { "text": "I loved the fast delivery and the product quality was outstanding." },
         "next": []
       }
