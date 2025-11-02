@@ -14,7 +14,7 @@ It enables enterprises to integrate AI as part of a **hybrid workforce**, runnin
 - **Agent orchestration** with concurrency, retries, and timeouts  
 - **Pluggable Tools** — HTTP fetcher, AWS Comprehend (Sentiment Analysis, Key Phrases)  
 - **REST API** to submit graphs and poll execution status  
-- **Structured logging** and in-memory persistence for prototyping  
+- **Data persistence** in-memory for prototyping  
 
 ---
 
