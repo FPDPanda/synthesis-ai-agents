@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../tests/SynthesisAIAgents.Tests/SynthesisAIAgents.Tests.csproj" Id="f63bb363-2dbb-472f-a178-5f8acddef04a" />
+  <Project Path="SynthesisAIAgents.Api.csproj" />
+</Solution>

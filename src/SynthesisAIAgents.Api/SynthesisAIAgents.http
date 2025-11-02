@@ -1,0 +1,92 @@
+# SynthesisAIAgents.http
+
+### Environment
+@SynthesisAIAgents_HostAddress = http://localhost:5258
+
+### List available tools
+GET {{SynthesisAIAgents_HostAddress}}/api/tools
+Accept: application/json
+
+### Submit execution graph (fetch -> keyphrases)
+POST {{SynthesisAIAgents_HostAddress}}/api/orchestrator/submit
+Content-Type: application/json
+Accept: application/json
+
+{
+  "graph": {
+    "runId": "run-fetch-kp-001",
+    "name": "fetch-then-keyphrases",
+    "agents": [
+      {
+        "id": "fetch1",
+        "type": "fetch",
+        "parameters": { "tool": "http_fetcher", "url": "https://httpbin.org/json" },
+        "next": ["kp1"]
+      },
+      {
+        "id": "kp1",
+        "type": "keyphrases",
+        "parameters": {},
+        "next": []
+      }
+    ]
+  }
+}
+
+### Submit execution graph (direct keyphrases text)
+POST {{SynthesisAIAgents_HostAddress}}/api/orchestrator/submit
+Content-Type: application/json
+Accept: application/json
+
+{
+  "graph": {
+    "runId": "run-keyphrases-001",
+    "name": "single-keyphrases",
+    "agents": [
+      {
+        "id": "kp1",
+        "type": "keyphrases",
+        "parameters": { "text": "I loved the fast delivery and the product quality was outstanding." },
+        "next": []
+      }
+    ]
+  }
+}
+
+### Submit execution graph (fetch -> sentiment)
+POST {{SynthesisAIAgents_HostAddress}}/api/orchestrator/submit
+Content-Type: application/json
+Accept: application/json
+
+{
+  "graph": {
+    "runId": "run-fetch-sent-001",
+    "name": "fetch-then-sentiment",
+    "agents": [
+      {
+        "id": "fetch1",
+        "type": "fetch",
+        "parameters": { "tool": "http_fetcher", "url": "https://httpbin.org/json" },
+        "next": ["sent1"]
+      },
+      {
+        "id": "sent1",
+        "type": "aws_sentiment_analysis",
+        "parameters": {},
+        "next": []
+      }
+    ]
+  }
+}
+
+### Poll run status (replace run id)
+GET {{SynthesisAIAgents_HostAddress}}/api/orchestrator/status/run-fetch-kp-001
+Accept: application/json
+
+###
+GET {{SynthesisAIAgents_HostAddress}}/api/orchestrator/status/run-keyphrases-001
+Accept: application/json
+
+### Cancel a run example
+POST {{SynthesisAIAgents_HostAddress}}/api/orchestrator/cancel/run-fetch-kp-001
+Accept: application/json
